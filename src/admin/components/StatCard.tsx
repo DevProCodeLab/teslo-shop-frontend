@@ -1,22 +1,19 @@
 import React from 'react';
-import { DivideIcon as LucideIcon } from 'lucide-react';
 
 interface StatCardProps {
   title: string;
   value: string;
   change: string;
   changeType: 'positive' | 'negative' | 'neutral';
-  icon: LucideIcon;
   color: string;
 }
 
-const StatCard: React.FC<StatCardProps> = ({ 
-  title, 
-  value, 
-  change, 
-  changeType, 
-  icon: Icon, 
-  color 
+const StatCard: React.FC<StatCardProps> = ({
+  title,
+  value,
+  change,
+  changeType,
+  color
 }) => {
   const changeColor = {
     positive: 'text-green-600 bg-green-50',
@@ -35,7 +32,7 @@ const StatCard: React.FC<StatCardProps> = ({
           </div>
         </div>
         <div className={`p-3 rounded-lg ${color}`}>
-          <Icon size={24} className="text-white" />
+
         </div>
       </div>
     </div>
